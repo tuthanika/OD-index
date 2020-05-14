@@ -8,14 +8,14 @@ class UploadController{
 			$remotepath = get_absolute_path($_POST['remote']);
 			if(is_file($local)){
 				$this->add_task($local, $remotepath);
-				$message = "文件<kbd>".$local."</kbd>已添加到队列";
+				$message = "Tập tin<kbd>".$local."</kbd>Được thêm vào hàng đợi";
 			}elseif(is_dir($local)){
 				$this->scan_dir($local, $remotepath);
-				$message = "文件夹<kbd>".$local."</kbd>已添加到队列";
+				$message = "Thư mục<kbd>".$local."</kbd>Được thêm vào hàng đợi";
 			}elseif($local == realpath('.')){
-				$message = "因为安全原因，程序文件夹根目录不能上传";
+				$message = "Vì lý do bảo mật, thư mục gốc của thư mục chương trình không thể được tải lên";
 			}else{
-				$message = "文件不存在";
+				$message = "Tập tin không tồn tại";
 			}
 			$request = $this->task_request();
 			$request['url'] = substr($request['url'],0,-4).'run';

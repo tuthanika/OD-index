@@ -4,18 +4,18 @@
 	
 <div class="mdui-container-fluid">
 	<div class="mdui-typo">
-	  <h1>程序安装 <small>完成安装</small></h1>
+	  <h1>Cài đặt chương trình <small> Hoàn tất cài đặt</small></h1>
 	</div>
 
 <?php if($refresh_token):?>
-	<h1 class='mdui-text-color-green'>程序安装成功!</h1>
+	<h1 class='mdui-text-color-green'>Chương trình được cài đặt thành công.!</h1>
 	<br><br>
-	<a class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-left" href="?/admin/" ><i class="mdui-icon material-icons">&#xe8b8;</i> 管理后台</a>(初始密码:oneindex)
-	<a class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right" href="./"><i class="mdui-icon material-icons">&#xe2c7;</i> 访问网站</a>
+	<a class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-left" href="?/admin/" ><i class="mdui-icon material-icons">&#xe8b8;</i> Nền tảng quản lý</a>(Mật khẩu ban đầu: oneindex)
+	<a class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right" href="./"><i class="mdui-icon material-icons">&#xe2c7;</i> Truy cập trang web</a>
 <?php else:?>
-	<h1  class='mdui-text-color-red'>程序安装失败!</h1>
+	<h1  class='mdui-text-color-red'>Việc cài đặt chương trình thất bại!</h1>
 	<br><br>
-	<a class="mdui-btn mdui-btn-raised mdui-float-left" href="?step=2">重新绑定</a>
+	<a class="mdui-btn mdui-btn-raised mdui-float-left" href="?step=2">Rebind</a>
 <?php endif;?>
 
 

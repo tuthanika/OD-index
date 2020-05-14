@@ -4,9 +4,9 @@
 
 ## 功能
 
-不占用服务器空间，不走服务器流量，  
+Không chiếm dung lượng máy chủ, không chiếm lưu lượng máy chủ,
 
-直接列出 OneDrive 目录，文件直链下载。  
+Liệt kê trực tiếp thư mục OneDrive và tải tệp trực tiếp.
 
 ## 伪静态
 

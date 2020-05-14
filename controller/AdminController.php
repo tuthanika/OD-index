@@ -31,7 +31,7 @@ class AdminController{
 			setcookie('admin', md5(config('password').config('refresh_token')) );
 			return view::direct(get_absolute_path(dirname($_SERVER['SCRIPT_NAME'])).'?/admin/');
 		}
-		return view::load('login')->with('title', '系统管理');
+		return view::load('login')->with('title', 'Quản lý hệ thống');
 	}
 
 	function logout(){
@@ -45,10 +45,10 @@ class AdminController{
 		if($_POST){
 			
 			if ($this->cache_exists($_POST['cache_type'])) {
-				$message = '保存成功';
+				$message = 'Đã lưu thành công';
 				config('cache_type', $_POST['cache_type']);
 			} else {
-				$message = '缓存类型不可用，请确认已经安装了该拓展。';
+				$message = 'Loại bộ đệm không có sẵn, vui lòng xác nhận rằng tiện ích mở rộng đã được cài đặt.';
 				config('cache_type', 'secache');
 			}
 
@@ -90,10 +90,10 @@ class AdminController{
 	function cache(){
 		if(!is_null($_POST['clear'])){
 			cache::clear();
-			$message = "清除缓存成功";
+			$message = "Xóa thành công bộ đệm";
 		}elseif ( !is_null($_POST['refresh']) ){
 			oneindex::refresh_cache(get_absolute_path(config('onedrive_root')));
-			$message = "重建缓存成功";
+			$message = "Xây dựng lại thành công bộ đệm";
 		}
 		return view::load('cache')->with('message', $message);
 	}
@@ -118,14 +118,14 @@ class AdminController{
 			config('show', $show);
 		}
 		$names = [
-			'stream'=>'直接输出(<5M)，走本服务器流量(stream)',
-			'image' =>'图片(image)',
-			'video'=>'Dplayer 视频(video)',
-			'video2'=>'Dplayer DASH 视频(video2)/个人版账户不支持',
-			'video5'=>'html5视频(video5)',
-			'audio'=>'音频播放(audio)',
-			'code'=>'文本/代码(code)',
-			'doc'=>'文档(doc)'
+			'stream'=>'Đầu ra trực tiếp(<5M)，Lấy lưu lượng máy chủ này(stream)',
+			'image' =>'Hình ảnh(image)',
+			'video'=>'Dplayer video(video)',
+			'video2'=>'Dplayer DASH video (video2)/Tài khoản cá nhân không được hỗ trợ',
+			'video5'=>'html5 video(video5)',
+			'audio'=>'Máy nghe nhạc(audio)',
+			'code'=>'Văn bản / mã (code)',
+			'doc'=>'Doc'
 		];
 		$show = config('show');
 		return view::load('show')->with('names', $names)->with('show', $show);
@@ -136,12 +136,12 @@ class AdminController{
 			if($_POST['old_pass'] == config('password')){
 				if($_POST['password'] == $_POST['password2']){
 					config('password', $_POST['password']);
-					$message = "修改成功";
+					$message = "Sửa đổi thành công";
 				}else{
-					$message = "两次密码不一致，修改失败";
+					$message = "Hai mật khẩu không nhất quán, sửa đổi thất bại";
 				}
 			}else{
-				$message = "原密码错误，修改失败";
+				$message = "Mật khẩu ban đầu không chính xác, sửa đổi thất bại";
 			}
 		}
 		return view::load('setpass')->with('message', $message);
@@ -167,7 +167,7 @@ class AdminController{
 		$check['config'] = is_writable(ROOT.'config/');
 		$check['cache'] = is_writable(ROOT.'cache/');
 
-		return view::load('install/install_0')->with('title','系统安装')
+		return view::load('install/install_0')->with('title','Cài đặt hệ thống')
 						->with('check', $check);
 	}
 
@@ -189,13 +189,13 @@ class AdminController{
 		$ru = "https://developer.microsoft.com/en-us/graph/quick-start?appID=_appId_&appName=_appName_&redirectUrl={$redirect_uri}&platform=option-php";
 		$deepLink = "/quickstart/graphIO?publicClientSupport=false&appName=oneindex&redirectUrl={$redirect_uri}&allowImplicitFlow=false&ru=".urlencode($ru);
 		$app_url = "https://apps.dev.microsoft.com/?deepLink=".urlencode($deepLink);
-		return view::load('install/install_1')->with('title','系统安装')
+		return view::load('install/install_1')->with('title','Cài đặt hệ thống')
 						->with('redirect_uri', $redirect_uri)
 						->with('app_url', $app_url);
 	}
 
 	function install_2(){
-		return view::load('install/install_2')->with('title','系统安装');
+		return view::load('install/install_2')->with('title','Cài đặt hệ thống');
 	}
 
 	function install_3(){

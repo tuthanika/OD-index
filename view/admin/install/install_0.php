@@ -4,7 +4,7 @@
 	
 <div class="mdui-container-fluid">
 	<div class="mdui-typo">
-	  <h1>程序安装 <small>环境检测</small></h1>
+	  <h1>Cài đặt chương trình <small> Phát hiện môi trường</small></h1>
 	</div>
 
 	<div class="mdui-table-fluid">
@@ -12,8 +12,8 @@
 	    <thead>
 	      <tr>
 	        <th>#</th>
-	        <th>环境需求</th>
-	        <th>当前环境</th>
+            <th>Yêu cầu về môi trường</th>
+            <th>Môi trường hiện tại</th>
 	      </tr>
 	    </thead>
 	    <tbody>
@@ -28,7 +28,7 @@
 	      </tr>
 	      <tr>
 	        <td>2</td>
-	        <td>curl 支持</td>
+	        <td>curl support</td>
 	        <?php if($check['curl']): ?>
 	        <td><i class="mdui-icon material-icons" style="color:#4caf50;">&#xe5ca;</i></td>
 	        <?php else:?>
@@ -37,7 +37,7 @@
 	      </tr>
 	      <tr>
 	        <td>3</td>
-	        <td>config/ 目录可读可写</td>
+	        <td>config/ thư mục có thể đọc và ghi được</td>
 	        <?php if($check['config']): ?>
 	        <td><i class="mdui-icon material-icons" style="color:#4caf50;">&#xe5ca;</i></td>
 	        <?php else:?>
@@ -46,7 +46,7 @@
 	      </tr>
 	      <tr>
 	        <td>4</td>
-	        <td>cache/ 目录可读可写</td>
+	        <td>cache/ thư mục có thể đọc và ghi được</td>
 	        <?php if($check['cache']): ?>
 	        <td><i class="mdui-icon material-icons" style="color:#4caf50;">&#xe5ca;</i></td>
 	        <?php else:?>
@@ -59,9 +59,9 @@
 	<br><br>
 	<!--<a class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-left" href="?step=1">上一步</a>-->
 	<?php if(array_sum($check) == count($check)):?>
-	<a class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right" href="?step=1">下一步</a>
+	<a class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right" href="?step=1">Bước tiếp theo</a>
 	<?php else:?>
-	<button class="mdui-btn mdui-btn-raised  mdui-float-right disabled" disabled>下一步</button>
+	<button class="mdui-btn mdui-btn-raised  mdui-float-right disabled" disabled>Bước tiếp theo</button>
 	<?php endif;?>
 </div>
 

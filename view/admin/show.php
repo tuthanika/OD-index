@@ -4,7 +4,7 @@
 <div class="mdui-container-fluid">
 
 	<div class="mdui-typo">
-	  <h1> 文件展示设置 <small>根据不同后缀进行展示。无设置后缀，直连下载</small></h1>
+	  <h1> Cài đặt hiển thị tập tin <small>Hiển thị theo các hậu tố khác nhau. Không có hậu tố cài đặt, tải trực tiếp</small></h1>
 	</div>
 	<form action="" method="post">
 		<?php foreach($show as $n=>$ext):?>
@@ -15,7 +15,7 @@
 		<?php endforeach;?>
 
 	   <button type="submit" class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right">
-	   	<i class="mdui-icon material-icons">&#xe161;</i> 保存
+	   	<i class="mdui-icon material-icons">&#xe161;</i> Lưu
 	   </button>
 	</form>
 </div>

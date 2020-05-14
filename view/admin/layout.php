@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
-	<title>OneIndex 系统管理</title>
+	<title>Quản lý hệ thống One Index</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.1/dist/css/mdui.min.css" integrity="sha256-lCFxSSYsY5OMx6y8gp8/j6NVngvBh3ulMtrf4SX5Z5A=" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/mdui@0.4.1/dist/js/mdui.min.js" integrity="sha256-dZxrLDxoyEQADIAGrWhPtWqjDFvZZBigzArprSzkKgI=" crossorigin="anonymous"></script>
 	<script>$ = mdui.JQ;</script>
@@ -14,7 +14,7 @@
     <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
     <a href="./" target="_blank" class="mdui-typo-headline mdui-hidden-xs">OneIndex</a>
     <div class="mdui-toolbar-spacer"></div>
-    <a href="<?php echo $root?>?/logout"><i class="mdui-icon material-icons">&#xe8ac;</i> 登出</a>
+    <a href="<?php echo $root?>?/logout"><i class="mdui-icon material-icons">&#xe8ac;</i> Đăng xuất</a>
   </div>
 </header>
 <div class="mdui-drawer" id="main-drawer">
@@ -23,36 +23,36 @@
 	<br><br>  
 	<a href="<?php echo $root?>?/admin" class="mdui-list-item">
       <i class="mdui-list-item-icon mdui-icon material-icons">&#xe8b8;</i>
-      <div class="mdui-list-item-content">基本设置</div>
+      <div class="mdui-list-item-content">Cài đặt cơ bản</div>
     </a>
 
     <a href="<?php echo $root?>?/admin/cache" class="mdui-list-item">
       <i class="mdui-list-item-icon mdui-icon material-icons">&#xe53b;</i>
-      <div class="mdui-list-item-content">页面缓存</div>
+      <div class="mdui-list-item-content">Bộ đệm trang</div>
     </a>
 
     <a href="<?php echo $root?>?/admin/show" class="mdui-list-item">
       <i class="mdui-list-item-icon mdui-icon material-icons">&#xe3a5;</i>
-      <div class="mdui-list-item-content">文件展示设置</div>
+      <div class="mdui-list-item-content">Cài đặt hiển thị tập tin</div>
     </a>
     <a href="<?php echo $root?>?/admin/images" class="mdui-list-item">
       <i class="mdui-list-item-icon mdui-icon material-icons">&#xe410;</i>
-      <div class="mdui-list-item-content">图床设置(OneImages)</div>
+      <div class="mdui-list-item-content">Cài đặt giường hình (OneImages)</div>
     </a>
 
     <a href="<?php echo $root?>?/admin/upload" class="mdui-list-item">
       <i class="mdui-list-item-icon mdui-icon material-icons">&#xe2c6;</i>
-      <div class="mdui-list-item-content">上传管理</div>
+      <div class="mdui-list-item-content">Quản lý tải lên</div>
     </a>
 
     <a href="<?php echo $root?>?/admin/setpass" class="mdui-list-item">
       <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88d;</i>
-      <div class="mdui-list-item-content">密码修改</div>
+      <div class="mdui-list-item-content">Đổi mật khẩu</div>
     </a>
 
     <a href="https://onedrive.live.com/" class="mdui-list-item" target="_blank">
       <i class="mdui-list-item-icon mdui-icon material-icons">&#xe2bf;</i>
-      <div class="mdui-list-item-content">文件管理(OneDrive)</div>
+      <div class="mdui-list-item-content">Quản lý tệp (OneDrive)</div>
     </a>
   </div>
 </div>

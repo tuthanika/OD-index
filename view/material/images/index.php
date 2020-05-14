@@ -17,7 +17,7 @@
 	<div class="mdui-row-xs-3">
 	  <div class="mdui-col"></div>
 	  <div class="mdui-col">
-	    <button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple">上传</button>
+	    <button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple">Tải lên</button>
 	  </div>
 	</div>
 
